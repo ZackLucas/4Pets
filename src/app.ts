@@ -32,8 +32,8 @@ export class ConfigureApplication {
     }
 
     public start(): void {
-        this.server = this.app.listen(process.env.port || this.port, () => {
-            console.log(`Server is running...${process.env}`)
+        this.server = this.app.listen(process.env.PORT || this.port, () => {
+            console.log(`Server is running...`)
         })
     }
 }
