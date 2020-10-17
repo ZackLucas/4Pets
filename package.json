@@ -1,0 +1,32 @@
+{
+  "name": "4pets",
+  "version": "1.0.0",
+  "description": "Thinking about your pet the best to find the best for your friend!",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZackLucas/4Pets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZackLucas/4Pets/issues"
+  },
+  "homepage": "https://github.com/ZackLucas/4Pets#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/module-alias": "^2.0.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "ts-node-dev": "^1.0.0-pre.65",
+    "typescript": "^4.0.3"
+  }
+}
