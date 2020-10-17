@@ -4,9 +4,8 @@
   "description": "Thinking about your pet the best to find the best for your friend!",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "npm run build && node dist/server.js",
-    "dev": "ts-node-env 'src/server.ts'",
+    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +19,8 @@
   },
   "homepage": "https://github.com/ZackLucas/4Pets#readme",
   "dependencies": {
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "knex": "^0.21.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
