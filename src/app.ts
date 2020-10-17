@@ -26,13 +26,13 @@ export class ConfigureApplication {
     }
 
     private setupExpress(): void {
+        this.app.use(cors(this.corsOption))
         this.app.use(bodyParser.json())
         this.app.use(bodyParser.urlencoded({ extended: true }));
-        this.app.use(cors(this.corsOption))
     }
 
     public start(): void {
-        this.server = this.app.listen(this.port, () => {
+        this.server = this.app.listen(process.env.port || this.port, () => {
             console.log(`Server is running on port ${this.port}`)
         })
     }
