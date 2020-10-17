@@ -4,8 +4,9 @@
   "description": "Thinking about your pet the best to find the best for your friend!",
   "main": "index.js",
   "scripts": {
-    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
+    "build": "tsc",
+    "start": "yarn build && node dist/server.js",
+    "dev": "ts-node-env 'src/server.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
